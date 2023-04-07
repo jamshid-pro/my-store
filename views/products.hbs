@@ -1,0 +1,48 @@
+<h1 class="text-center my-5 home__h1 display-3 fw-semibold">My Products</h1>
+{{#if myProducts}}
+<div class="row mt-4 g-4 my-4">
+    {{#each myProducts}}
+    <div class="col-12 col-md-6 col-lg-4 rounded-5">
+        <div class="card shadow-sm">
+            <img src={{image}} alt="">
+            <div class="card-body">
+                <p class="card-text fs-4">{{title}}</p>
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed mx-0" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Kurs haqida to'liq
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">{{description}}</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="py-3 px-0 d-flex justify-content-between">
+                    <div class="d-flex gap-2 align-items-center">
+                        <div class="avatar bg-primary">
+                            <p class="p-0 m-0">{{getFirstChar user.firstName user.lastName}}</p>
+                        </div>
+                        <p class="p-0 m-0">{{user.firstName}} {{user.lastName}}</p>
+                    </div>
+                    <div class="btn-group mt-2">
+                        <small class="fs-5 p-0 m-0">{{price}}.00$</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<div class="mb-product">
+    <h3 class="mt-5 text-danger fs-1 text-center">No Products</h3>
+</div>
+{{/if}}

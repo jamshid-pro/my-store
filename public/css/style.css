@@ -1,0 +1,99 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
+:root {
+    --Inter: font-family: 'Inter', sans-serif;
+    --Lobster: font-family: 'Lobster', cursive;
+    --Playfair: font-family: 'Playfair Display', serif;
+    --Delicious: font-family: 'Delicious Handrawn'
+}
+
+
+.bg-purple {
+    background-color: #5E3B7F;
+}
+
+.text-purple {
+    color: #5E3B7F;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 100%;
+    color:#fff;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.avatar p {
+    padding: 0;
+    margin: 0;
+}
+
+.home__h1{
+    font-family: var(--Playfair);
+}
+
+.mb-add {
+    margin-bottom: 320px;
+}
+
+.mb-edit {
+    margin-bottom: 260px;
+}
+
+.mb-product {
+    margin-bottom: 610px;
+}
+.mb-login {
+    margin-bottom: 520px;
+}
+.mb-register {
+    margin-bottom: 380px;
+}
+
+.font-lobster {
+    font-family: var(--Lobster);
+}
+
+.font-inter {
+    font-family: var(--Inter);
+}
+
+.font-delicious {
+    font-family: var(--Delicious);
+}
+
+#product-one > div {
+    height: 60vh;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@media (max-width:992px) {
+    #h1 {
+        font-size: 40px!important;
+        text-align: center;
+    }
+}
+@media (max-width:500px) {
+    #h1 {
+        font-size: 30px!important;
+        text-align: center;
+    }
+}
+
+.delBtn {
+    border-radius: 0 10px 10px 0;
+    margin: 0;
+}

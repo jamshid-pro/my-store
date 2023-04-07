@@ -1,0 +1,52 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-body-tertiary mb-4 sticky-top p-3">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand" href="/">
+          <i class="bi bi-unity fs-3 text-light"></i>
+          <span class="fs-3">My Store</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body fs-5">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          {{#if isProduct}}
+          <a class="me-3 py-2 text-light " href="/products">My Products</a>
+          {{else}}
+          <a class="me-3 py-2 text-light text-decoration-none" href="/products">Products</a>
+          {{/if}}
+
+          {{#if isAdd}}
+          <a class="me-3 py-2 text-light" href="/add">Add</a>
+          {{else}}
+          <a class="me-3 py-2 text-light text-decoration-none" href="/add">Add</a>
+          {{/if}}
+
+          <div class="btn-group d-flex align-items-center" role="group" aria-label="Basic mixed styles example">
+            {{#if token}}
+            <a class="btn btn-danger active text-decoration-none text-light" href="/logout">Logout</a>
+            {{else}}
+            {{#if isLogin}}
+            <a class="btn btn-primary active text-decoration-none text-light" href="/login">Login</a>
+            {{else}}
+            <a class="btn btn-primary text-decoration-none text-light" href="/login">Login</a>
+            {{/if}}
+
+
+            {{#if isRegister}}
+            <a class="btn btn-success active text-decoration-none text-light" href="/register">Register</a>
+            {{else}}
+            <a class="btn btn-success text-decoration-none text-light" href="/register">Register</a>
+            {{/if}}
+            {{/if}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

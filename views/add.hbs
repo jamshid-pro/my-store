@@ -1,0 +1,31 @@
+<div class="col-12 col-md-8 mx-auto mb-add">
+    <h1 class="mb-5">Add Products</h1>
+    {{#if productError}}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error</strong>
+        {{productError}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+    <form action="/add-product" method="post">
+        <div class="form-floating my-3">
+            <input type="text" class="form-control" name="title" id="floatingInput" placeholder="Title">
+            <label for="floatingInput">Title</label>
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text fs-4" id="addon-wrapping">$</span>
+            <input type="number" class="form-control fs-4" name="price" placeholder="Price" aria-label="Price"
+                aria-describedby="addon-wrapping">
+        </div>
+        <div class="form-floating my-3">
+            <input type="text" class="form-control" name="image" id="floatingInput" placeholder="Image">
+            <label for="floatingInput">Image</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" name="description" placeholder="Leave a comment here" id="floatingTextarea2"
+                style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Comments</label>
+        </div>
+        <button type="submit" class="btn btn-primary my-3 col-12 col-md-3">Add Product</button>
+    </form>
+</div>
