@@ -38,23 +38,6 @@
     font-family: var(--Playfair);
 }
 
-.mb-add {
-    margin-bottom: 320px;
-}
-
-.mb-edit {
-    margin-bottom: 260px;
-}
-
-.mb-product {
-    margin-bottom: 610px;
-}
-.mb-login {
-    margin-bottom: 520px;
-}
-.mb-register {
-    margin-bottom: 380px;
-}
 
 .font-lobster {
     font-family: var(--Lobster);
