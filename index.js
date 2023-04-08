@@ -5,7 +5,6 @@ import connectDB from "./config/db.js";
 import session from "express-session";
 import flash from "connect-flash";
 import cookieParser from "cookie-parser";
-import helmet from "helmet";
 
 
 import userMiddleware from "./middleware/userMiddleware.js";
@@ -34,7 +33,6 @@ app.use(session({secret: "Boom", resave: false, saveUninitialized: false}));
 app.use(flash());
 app.use(tokenMiddleware);
 app.use(userMiddleware);
-app.use(helmet());
 
 // Router
 app.use(authRoutes);

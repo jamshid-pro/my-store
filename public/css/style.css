@@ -56,8 +56,13 @@
 }
 
 .product-image {
-    width: 100%;
+    width: 90%;
     height: 100%;
+    object-fit: cover; 
+}
+
+.image {
+    height: 300px !important;
     object-fit: cover;
     object-position: center;
 }
